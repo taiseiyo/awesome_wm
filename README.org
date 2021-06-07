@@ -10,3 +10,6 @@ You need to move file as follows.
 sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 #+end_src
 
+* Extend version
+
+- If you want to use same key map as xpywm, you just use "rc.lua" in this repository.
