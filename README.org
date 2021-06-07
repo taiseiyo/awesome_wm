@@ -3,5 +3,5 @@
 sudo apt install awesome
 #+end_src
 
-You need to move "//etc/xdg/awesome/rc.lua" to "~/.config/awesome/rc.lua"
+You need to move "/etc/xdg/awesome/rc.lua" to "~/.config/awesome/rc.lua"
  
