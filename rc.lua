@@ -94,6 +94,7 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
+
 local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
 local menu_terminal = { "open terminal", terminal }
 
@@ -324,9 +325,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ "Mod1", "Control" }, ".", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
+              {description = "decrease the number of columns", group = "layout"}),	      
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
@@ -370,6 +369,17 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
+	      
+    awful.key({ "Mod1", "Control" }, ".",
+    	function (c)
+		 if c.maximized then
+		    c.maximized = not c.maximized
+		    c:raise()
+		 end
+    		 awful.layout.inc(1)
+    	end,
+	{description = "Shape the screen equally", group = "client"}),
+
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
@@ -384,7 +394,6 @@ clientkeys = gears.table.join(
             -- minimized, since minimized clients can't have the focus.
             c.minimized = true
         end ,
-
 
         {description = "minimize", group = "client"}),
     awful.key({ "Control","Mod1"  }, "'",
