@@ -376,6 +376,10 @@ clientkeys = gears.table.join(
 		    c.maximized = not c.maximized
 		    c:raise()
 		 end
+		 if c.maximized_vertical then
+		    c.maximized_vertical = not c.maximized_vertical
+     		    c:raise()
+     		 end
     		 awful.layout.inc(1)
     	end,
 	{description = "Shape the screen equally", group = "client"}),
