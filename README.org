@@ -14,7 +14,8 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 
 - If you want to use same key map as xpywm, you enter the following command.
 
-#+begin_src bash install.sh
+#+srcname: install.sh
+#+begin_src bash 
 git clone git@github.com:taiseiyo/awesome_wm.git
 cd awesome_wm
 sudo apt install scrot xclip
