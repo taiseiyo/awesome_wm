@@ -5,6 +5,9 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+-- Load the widget.
+local screenshot = require("screenshot")
+
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
@@ -283,8 +286,11 @@ globalkeys = gears.table.join(
               {description = "show main menu", group = "awesome"}),
 
     -- screen shot
-    awful.key({ "Mod1", "Control" }, "1",   function () awful.util.spawn("scrot") end),
-    
+    awful.key({ }, "Print", scrot_full,
+       {description = "Take a screenshot of entire screen", group = "screenshot"}),
+    awful.key({ modkey, }, "Print", scrot_selection,
+       {description = "Take a screenshot of selection", group = "screenshot"}),
+
     -- emacs 
     awful.key({ "Mod1", "Control" }, "2",   function () awful.util.spawn("emacs") end),
 

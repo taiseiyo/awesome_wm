@@ -13,3 +13,12 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 * Extend version
 
 - If you want to use same key map as xpywm, you just use "rc.lua" in this repository.
+
+#+begin_src  
+git clone "this repository"
+cd awesome_wm
+sudo apt install scrot xclip
+mv rc.lua screenshot.lua ~/.config/awesome/rc.lua
+#+end_src
+
+- screenshot default preserve directory is "~/tmp/screenshots/"
