@@ -418,13 +418,14 @@ clientkeys = gears.table.join(
             c.maximized_vertical = not c.maximized_vertical
             c:raise()
         end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ "Control","Mod1"   }, "l",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-	{description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize vertically", group = "client"})
+    -- awful.key({ "Control","Mod1"   }, "l",
+    --     function (c)
+    --         c.maximized_horizontal = not c.maximized_horizontal
+    --         c:raise()
+    --     end ,
+    -- 	{description = "(un)maximize horizontally", group = "client"})
+	
 )	     
 
 
