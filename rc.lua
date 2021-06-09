@@ -6,7 +6,7 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 -- Load the widget.
-local screenshot = require("screenshot")
+local screenshot = require("widget.screenshot")
 
 require("awful.autofocus")
 -- Widget and layout library
