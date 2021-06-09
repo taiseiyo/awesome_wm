@@ -17,7 +17,7 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 
 #+begin_src bash 
 #!/usr/bin/env bash
-sudo apt install awesome scrot xclip
+sudo apt install awesome scrot xclip git
 git clone https://github.com/taiseiyo/awesome_wm.git
 cd awesome_wm
 mv xinitrc ~/.xinitrc
