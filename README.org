@@ -23,7 +23,7 @@ cd awesome_wm
 mv xinitrc ~/.xinitrc
 mkdir -p ~/.config/awesome/
 mkdir -p ~/tmp/screenshots/
-mv rc.lua widget/ ~/.config/awesome/
+mv rc.lua widget/ themes/ ~/.config/awesome/
 #+end_src
 
 - screenshot default preserve directory is "~/tmp/screenshots/"
