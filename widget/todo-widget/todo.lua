@@ -16,7 +16,7 @@ local beautiful = require("beautiful")
 local gfs = require("gears.filesystem")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/todo-widget'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/widget/todo-widget'
 local STORAGE = HOME_DIR .. '/.cache/awmw/todo-widget/todos.json'
 
 local GET_TODO_ITEMS = 'bash -c "cat ' .. STORAGE .. '"'
@@ -78,7 +78,7 @@ local popup = awful.popup{
     border_width = 1,
     border_color = beautiful.bg_focus,
     maximum_width = 500,
-    offset = { y = -800 },
+    offset = { y = -850 },
     widget = {}
 }
 
@@ -176,7 +176,8 @@ local function worker(user_args)
 
             local checkbox = wibox.widget {
                 checked       = todo_item.status,
-                color         = beautiful.bg_normal,
+                -- color         = beautiful.bg_normal,
+		color         = "silver",
                 paddings      = 2,
                 shape         = gears.shape.circle,
                 forced_width = 20,
@@ -317,7 +318,7 @@ local function worker(user_args)
             gears.table.join(
                     awful.button({}, 1, function()
                         if popup.visible then
-                            todo_widget.widget:set_bg('#00000000')
+                            todo_widget.widget:set_bg('#0000000')
                             popup.visible = not popup.visible
                         else
                             todo_widget.widget:set_bg(beautiful.bg_focus)
