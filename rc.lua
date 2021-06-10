@@ -7,7 +7,7 @@ local gears = require("gears")
 local awful = require("awful")
 -- Load the local widget. Write with a relative path from awesome.
 local screenshot = require("widget.screenshot-widget.screenshot")
-local todo_widget = require("widget.todo-widget.todo")
+local calendar_widget = require("widget.calendar-widget.calendar")
 
 require("awful.autofocus")
 -- Widget and layout library
@@ -133,6 +133,16 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
+local cw = calendar_widget({
+    theme = 'outrun',
+    placement = 'bottom_right',
+    radius = 8,
+})
+mytextclock:connect_signal("button::press", 
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -239,7 +249,7 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
-	    todo_widget(),
+
         },
     }
 end)
