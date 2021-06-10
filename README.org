@@ -20,10 +20,10 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 sudo apt install awesome scrot xclip git
 git clone https://github.com/taiseiyo/awesome_wm.git
 cd awesome_wm
-mv xinitrc ~/.xinitrc
+cp xinitrc ~/.xinitrc
 mkdir -p ~/.config/awesome/
 mkdir -p ~/tmp/screenshots/
-mv rc.lua widget/ themes/ ~/.config/awesome/
+cp -r rc.lua widget/ themes/ ~/.config/awesome/
 #+end_src
 
 - screenshot default preserve directory is "~/tmp/screenshots/"
