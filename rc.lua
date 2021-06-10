@@ -5,8 +5,9 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
--- Load the widget.
-local screenshot = require("widget.screenshot")
+-- Load the local widget. Write with a relative path from awesome.
+local screenshot = require("widget.screenshot-widget.screenshot")
+local todo_widget = require("widget.todo-widget.todo")
 
 require("awful.autofocus")
 -- Widget and layout library
@@ -215,7 +216,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+	
     }
 
     -- Create the wibox
@@ -237,6 +239,7 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
+	    todo_widget(),
         },
     }
 end)
