@@ -78,7 +78,7 @@ local popup = awful.popup{
     border_width = 1,
     border_color = beautiful.bg_focus,
     maximum_width = 500,
-    offset = { y = -850 },
+    offset = { y = -500 },
     widget = {}
 }
 
