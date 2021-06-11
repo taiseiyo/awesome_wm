@@ -399,7 +399,7 @@ clientkeys = gears.table.join(
               {description = "close", group = "client"}),
 	      
     awful.key({ "Mod1", "Control" }, ".",
-       function (c)
+       function ()
 	  for _, c in ipairs(client.get()) do
 	     if c.maximized then
 		c.maximized = not c.maximized
