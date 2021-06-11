@@ -28,6 +28,5 @@ cp -r rc.lua widget/ themes/ ~/.config/awesome/
 
 - screenshot default preserve directory is "~/tmp/screenshots/"
 
-* images
-- screenshot
-[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
+* Screenshot
+https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
