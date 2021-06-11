@@ -12,7 +12,7 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 
 * Extend version
 
-- If you want to use same key map as xpywm, you enter the following command.
+- If you want to use same key map as [[https://github.com/h-ohsaki/xpywm][xpywm]], you enter the following command.
   - Alternatively, you can run it as a file (install.sh) 
 
 #+begin_src bash 
@@ -27,3 +27,7 @@ cp -r rc.lua widget/ themes/ ~/.config/awesome/
 #+end_src
 
 - screenshot default preserve directory is "~/tmp/screenshots/"
+
+* images
+- screenshots
+[[]]
