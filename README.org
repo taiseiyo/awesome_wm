@@ -30,4 +30,4 @@ cp -r rc.lua widget/ themes/ ~/.config/awesome/
 
 * images
 - screenshots
-[[]]
+[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
