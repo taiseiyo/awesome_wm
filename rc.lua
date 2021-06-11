@@ -252,7 +252,6 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
-
         },
     }
 end)
@@ -400,18 +399,21 @@ clientkeys = gears.table.join(
               {description = "close", group = "client"}),
 	      
     awful.key({ "Mod1", "Control" }, ".",
-    	function (c)
-		 if c.maximized then
-		    c.maximized = not c.maximized
-		    c:raise()
-		 end
-		 if c.maximized_vertical then
-		    c.maximized_vertical = not c.maximized_vertical
-     		    c:raise()
-     		 end
-    		 awful.layout.inc(1)
-    	end,
-	{description = "Shape the screen equally", group = "client"}),
+       function (c)
+	  for _, c in ipairs(client.get()) do
+	     if c.maximized then
+		c.maximized = not c.maximized
+		c:raise()
+	     end
+	     if c.maximized_vertical then
+		c.maximized_vertical = not c.maximized_vertical
+		c:raise()
+	     end
+	  end
+	  awful.layout.inc(1)
+       end,
+
+       {description = "Shape the screen equally", group = "client"}),
 
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
