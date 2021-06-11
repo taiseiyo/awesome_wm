@@ -412,8 +412,7 @@ clientkeys = gears.table.join(
 	  end
 	  awful.layout.inc(1)
        end,
-
-       {description = "Shape the screen equally", group = "client"}),
+       {description = "Resize the screen evenly", group = "client"}),
 
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
