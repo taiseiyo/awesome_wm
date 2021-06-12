@@ -17,7 +17,9 @@ sudo mv /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 
 #+begin_src bash 
 #!/usr/bin/env bash
-sudo apt install awesome scrot xclip git
+sudo apt update
+sudo apt list --upgradable
+sudo apt install awesome scrot xclip git brightnessctl
 git clone https://github.com/taiseiyo/awesome_wm.git
 cd awesome_wm
 cp xinitrc ~/.xinitrc

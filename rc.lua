@@ -300,6 +300,12 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
+    -- control brightness
+    awful.key({ "Mod1", "Control" }, "[",   function () awful.util.spawn("brightnessctl -d intel_backlight set +10%") end,
+       {description = "Increase brightness", group = "brightness"}),
+    awful.key({ "Mod1", "Control" }, "]",   function () awful.util.spawn("brightnessctl -d intel_backlight set 10%-") end,
+       {description = "Decrease brightness", group = "brightness"}),
+    
     -- screen shot
     awful.key({ }, "Print", scrot_full,
        {description = "Take a screenshot of entire screen", group = "screenshot"}),
