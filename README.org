@@ -31,5 +31,6 @@ cp -r rc.lua widget/ themes/ ~/.config/awesome/
 * Screenshot
 
 #+CAPTION: Image when working normally 
-[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]] [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
+#+ATTR_ORG: :width 50%
+[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]] 
 
