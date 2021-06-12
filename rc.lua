@@ -8,6 +8,7 @@ local awful = require("awful")
 -- Load the local widget. Write with a relative path from awesome.
 local screenshot = require("widget.screenshot-widget.screenshot")
 local calendar_widget = require("widget.calendar-widget.calendar")
+local brightness_widget = require("widget.brightness-widget.brightness")
 
 require("awful.autofocus")
 -- Widget and layout library
@@ -252,6 +253,7 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
+	    brightness_widget(),
         },
     }
 end)
@@ -301,10 +303,13 @@ globalkeys = gears.table.join(
               {description = "show main menu", group = "awesome"}),
 
     -- control brightness
-    awful.key({ "Mod1", "Control" }, "[",   function () awful.util.spawn("brightnessctl -d intel_backlight set +10%") end,
-       {description = "Increase brightness", group = "brightness"}),
-    awful.key({ "Mod1", "Control" }, "]",   function () awful.util.spawn("brightnessctl -d intel_backlight set 10%-") end,
-       {description = "Decrease brightness", group = "brightness"}),
+    -- awful.key({ "Mod1", "Control" }, "]",   function () awful.util.spawn("brightnessctl -d intel_backlight set +10%") end,
+    --    {description = "Increase brightness", group = "brightness"}),
+    -- awful.key({ "Mod1", "Control" }, "[",   function () awful.util.spawn("brightnessctl -d intel_backlight set 10%-") end,
+    --    {description = "Decrease brightness", group = "brightness"}),
+
+    awful.key({"Mod1", "Control"}, "]", function () brightness_widget:inc() end, {description = "increase brightness", group = "brightness"}),
+    awful.key({"Mod1", "Control"}, "[", function () brightness_widget:dec() end, {description = "decrease brightness", group = "brightness"}),
     
     -- screen shot
     awful.key({ }, "Print", scrot_full,
