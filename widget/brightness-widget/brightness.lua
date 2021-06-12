@@ -1,11 +1,6 @@
 -------------------------------------------------
 -- Brightness Widget for Awesome Window Manager
 -- Shows the brightness level of the laptop display
--- More details could be found here:
--- https://github.com/streetturtle/awesome-wm-widgets/tree/master/brightness-widget
-
--- @author Pavel Makhov
--- @copyright 2021 Pavel Makhov
 -------------------------------------------------
 
 local awful = require("awful")
@@ -38,10 +33,9 @@ local function worker(user_args)
 
     local type = args.type or 'icon_and_text' -- arc or icon_and_text
     local path_to_icon = args.path_to_icon or ICON_DIR .. 'brightness.svg'
-    local font = args.font or 'Play 9'
+    local font = args.font or 'Play 10'
     local timeout = args.timeout or 100
     local program = args.program or 'brightnessctl'
-    local step = args.step or 5
     local base = args.base or 20
     local current_level = 0 -- current brightness value
     local tooltip = args.tooltip or false    
