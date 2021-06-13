@@ -35,5 +35,8 @@ else
     echo "No synergy server detected at $SRV"
 fi
 
+# zoom anotate
+xcompmgr -c 10 -t0 -r0 -o.00 &
+
 # Launch awesome
 exec awesome
