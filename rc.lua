@@ -214,12 +214,12 @@ awful.screen.connect_for_each_screen(function(s)
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox(s)
-    s.mylayoutbox:buttons(gears.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+    -- s.mylayoutbox = awful.widget.layoutbox(s)
+    -- s.mylayoutbox:buttons(gears.table.join(
+    --                        awful.button({ }, 1, function () awful.layout.inc( 1) end),
+    --                        awful.button({ }, 3, function () awful.layout.inc(-1) end),
+    --                        awful.button({ }, 4, function () awful.layout.inc( 1) end),
+    --                        awful.button({ }, 5, function () awful.layout.inc(-1) end)))
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
         screen  = s,
@@ -252,7 +252,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+            -- s.mylayoutbox,
 	    brightness_widget(),
         },
     }
@@ -278,13 +278,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    -- awful.key({ modkey,           }, "j",
-    --     function ()
-    --         awful.client.focus.byidx( 1)
-    --     end,
-    --     {description = "focus next by index", group = "client"}
-    -- ),
-
     awful.key({ "Control","Mod1"     }, "i",
         function ()
             awful.client.focus.byidx( 1)
@@ -292,25 +285,14 @@ globalkeys = gears.table.join(
         {description = "focus next by index", group = "client"}
     ),
 
-    -- awful.key({ modkey,           }, "k",
-    --     function ()
-    --         awful.client.focus.byidx(-1)
-    --     end,
-    --     {description = "focus previous by index", group = "client"}
-    -- ),
     
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- control brightness
-    -- awful.key({ "Mod1", "Control" }, "]",   function () awful.util.spawn("brightnessctl -d intel_backlight set +10%") end,
-    --    {description = "Increase brightness", group = "brightness"}),
-    -- awful.key({ "Mod1", "Control" }, "[",   function () awful.util.spawn("brightnessctl -d intel_backlight set 10%-") end,
-    --    {description = "Decrease brightness", group = "brightness"}),
-
     awful.key({"Mod1", "Control"}, "]", function () brightness_widget:inc() end, {description = "increase brightness", group = "brightness"}),
     awful.key({"Mod1", "Control"}, "[", function () brightness_widget:dec() end, {description = "decrease brightness", group = "brightness"}),
-    
+
     -- screen shot
     awful.key({ }, "Print", scrot_full,
        {description = "Take a screenshot of entire screen", group = "screenshot"}),
