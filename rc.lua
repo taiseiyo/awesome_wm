@@ -9,6 +9,7 @@ local awful = require("awful")
 local screenshot = require("widget.screenshot-widget.screenshot")
 local calendar_widget = require("widget.calendar-widget.calendar")
 local brightness_widget = require("widget.brightness-widget.brightness")
+local batteryarc_widget = require("widget.batteryarc-widget.batteryarc")
 
 require("awful.autofocus")
 -- Widget and layout library
@@ -253,7 +254,12 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             -- s.mylayoutbox,
+	    batteryarc_widget({
+		  show_current_level = true,
+		  arc_thickness = 1,
+            }),
 	    brightness_widget(),
+	    
         },
     }
 end)
