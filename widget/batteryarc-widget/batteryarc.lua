@@ -36,15 +36,6 @@ local function worker(user_args)
     local medium_level_color = args.medium_level_color or '#c0ca33'
     local charging_color = args.charging_color or '#5cffff'
 
-    local warning_msg_title = args.warning_msg_title or 'Houston, we have a problem'
-    local warning_msg_text = args.warning_msg_text or 'Battery is dying'
-    local warning_msg_position = args.warning_msg_position or 'bottom_right'
-    local warning_msg_icon = args.warning_msg_icon or WIDGET_DIR .. '/spaceman.jpg'
-    local enable_battery_warning = args.enable_battery_warning
-    if enable_battery_warning == nil then
-        enable_battery_warning = true
-    end
-
     local text = wibox.widget {
         font = font,
         align = 'center',
@@ -69,21 +60,6 @@ local function worker(user_args)
 
     local last_battery_check = os.time()
 
-    --[[ Show warning notification ]]
-    local function show_battery_warning()
-        naughty.notify {
-            icon = warning_msg_icon,
-            icon_size = 100,
-            text = warning_msg_text,
-            title = warning_msg_title,
-            timeout = 25, -- show the warning for a longer time
-            hover_timeout = 0.5,
-            position = warning_msg_position,
-            bg = "#F06060",
-            fg = "#EEE9EF",
-            width = 300,
-        }
-    end
 
     local function update_widget(widget, stdout)
         local charge = 0
@@ -120,11 +96,9 @@ local function worker(user_args)
 
         if charge < 15 then
             widget.colors = { low_level_color }
-            if enable_battery_warning and status ~= 'Charging' and os.difftime(os.time(), last_battery_check) > 300 then
+            if  status ~= 'Charging' and os.difftime(os.time(), last_battery_check) > 300 then
                 -- if 5 minutes have elapsed since the last warning
                 last_battery_check = os.time()
-
-                show_battery_warning()
             end
         elseif charge > 15 and charge < 40 then
             widget.colors = { medium_level_color }
