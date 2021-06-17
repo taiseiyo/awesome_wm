@@ -94,14 +94,14 @@ local function worker(user_args)
             text.text = ''
         end
 
-        if charge < 15 then
-            widget.colors = { low_level_color }
-            if  status ~= 'Charging' and os.difftime(os.time(), last_battery_check) > 300 then
+        if charge < 25 then
+	   widget.colors = { low_level_color }
+	   if  status ~= 'Charging' and os.difftime(os.time(), last_battery_check) > 300 then
                 -- if 5 minutes have elapsed since the last warning
-                last_battery_check = os.time()
-            end
-        elseif charge > 15 and charge < 25 then
-            widget.colors = { medium_level_color }
+	      last_battery_check = os.time()
+	   end
+        -- elseif charge > 15 and charge < 25 then
+        --     widget.colors = { medium_level_color }
         else
             widget.colors = { main_color }
         end
