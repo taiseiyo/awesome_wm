@@ -32,7 +32,6 @@ local function worker(user_args)
     local main_color = args.main_color or '#5cff5c'
     local bg_color = args.bg_color or '#ffffff11'
     local low_level_color = args.low_level_color or '#e53935'
-    local medium_level_color = args.low_level_color or '#e53935'
     -- local medium_level_color = args.medium_level_color or '#ffb01f'
     local charging_color = args.charging_color or '#5cffff'
 
@@ -100,8 +99,6 @@ local function worker(user_args)
                 -- if 5 minutes have elapsed since the last warning
 	      last_battery_check = os.time()
 	   end
-        -- elseif charge > 15 and charge < 25 then
-        --     widget.colors = { medium_level_color }
         else
             widget.colors = { main_color }
         end
