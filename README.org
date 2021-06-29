@@ -24,7 +24,7 @@ bash install.sh
 - screenshot default preserve directory is "~/tmp/screenshots/"
 
 * reference
-- [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lun info]]
+- [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
 
 * Screenshot
 *Image when working normally*
