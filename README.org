@@ -23,6 +23,24 @@ bash install.sh
 
 - screenshot default preserve directory is "~/tmp/screenshots/"
 
+* WSL version
+** Preparation 
+0. install Vcxsrv
+
+1. Add the following to .bashrc 
+#+begin_src bash
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export LIBGL_ALWAYS_INDIRECT=1
+#+end_src
+
+2. vcxsrv firewall settings 
+- press (Windows key + r)
+- input → wf.msc 
+- click Inbound Rules → Changed all actions to "allow the connection"
+
+3. XLanch option(starting)
+Enter "-ac" for the third additional option 
+
 * reference
 - [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
 
