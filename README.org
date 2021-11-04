@@ -38,8 +38,11 @@ bash install.sh
   - input → wf.msc 
   - click "Inbound Rules" → Changed all actions to "allow the connection"
 
-4. XLanch option(starting) 
+4. XLanch option(before starting) 
   - Enter "-ac" for the third additional option 
+
+5. start awesome
+  - Enter "awesome" on your terminal
 
 * reference
 - [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
