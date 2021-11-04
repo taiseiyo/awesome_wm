@@ -27,11 +27,11 @@ bash install.sh
 ** Preparation 
 1. install Vcxsrv
 
-2. Add the following to .bashrc 
-#+begin_src bash
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-export LIBGL_ALWAYS_INDIRECT=1
-#+end_src
+2. Add the following to .bashrc
+  #+begin_src bash
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+  export LIBGL_ALWAYS_INDIRECT=1
+  #+end_src
 
 3. vcxsrv firewall settings
   - press (Windows key + r)
