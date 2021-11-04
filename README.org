@@ -39,7 +39,7 @@ bash install.sh
   - click "Inbound Rules" → Changed all actions to "allow the connection"
 
 4. XLanch option(starting)
-  Enter "-ac" for the third additional option 
+  - Enter "-ac" for the third additional option 
 
 * reference
 - [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
