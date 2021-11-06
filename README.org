@@ -41,10 +41,12 @@ bash install.sh
   - input → wf.msc 
   - click "Inbound Rules" → Changed all actions to "allow the connection"
 
-5. XLanch option(before starting) 
+5. choice "scale 100%" from Windows Settings → System → Display
+
+6. XLanch option(before starting) 
   - Enter "-ac" for the third additional option 
 
-6. start awesome
+7. start awesome
   - Enter "awesome" on your terminal
 
 * reference
