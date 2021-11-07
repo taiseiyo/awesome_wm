@@ -25,9 +25,14 @@ bash install.sh
 
 * WSL version
 ** Preparation 
-1. install Vcxsrv
+1. Click Windows icon → enter "control panel" → click "program" →
+   click "program and features" → click "Turn Windows features on or
+   off" in left menu → check "Windows Subsystem for Linux" and
+   "Virtual Machine Platform"
 
-2. Add the following to .bashrc
+2. install Vcxsrv
+
+3. Add the following to .bashrc
   #+begin_src bash
   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
   export LIBGL_ALWAYS_INDIRECT=1
@@ -36,21 +41,21 @@ bash install.sh
   export GDK_SCALE=1.25
   #+end_src
 
-3. edit /etc/X11/Xwrapper.config
-  - add "allowed_users=anybody"
+4. edit /etc/X11/Xwrapper.config
+   - add "allowed_users=anybody"
 
-4. vcxsrv firewall settings
-  - press (Windows key + r)
-  - input → wf.msc 
-  - click "Inbound Rules" → Changed all actions to "allow the connection"
+5. vcxsrv firewall settings
+   - press (Windows key + r)
+   - input → wf.msc 
+   - click "Inbound Rules" → Changed all actions to "allow the connection"
 
-5. choice "scale 100%" from Windows Settings → System → Display
+6. choice "scale 100%" from Windows Settings → System → Display
 
-6. XLanch option(before starting) 
-  - Enter "-ac" for the third additional option 
+7. XLanch option(before starting) 
+   - Enter "-ac" for the third additional option 
 
-7. start awesome
-  - Enter "awesome" on your terminal
+8. start awesome
+   - Enter "awesome" on your terminal
 
 * reference
 - [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
