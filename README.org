@@ -52,7 +52,7 @@ bash install.sh
 6. choice "scale 100%" from Windows Settings → System → Display
 
 7. XLanch option(before starting) 
-   - Enter "-ac" for the third additional option 
+   - Enter "-ac -keyhook" for the third additional option 
 
 8. start awesome
    - Enter "awesome" on your terminal
