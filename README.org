@@ -57,6 +57,11 @@ bash install.sh
 8. start awesome
    - Enter "awesome" on your terminal
 
+9. You should install below
+#+begin_src bash
+sudo apt install dbus-x11 
+#+end_src
+
 * reference
 - [[https://awesomewm.org/apidoc/sample%20files/rc.lua.html][lua info]]
 
