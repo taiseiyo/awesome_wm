@@ -62,6 +62,8 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt -e tmux"
+-- terminal = 'urxvt -fn "xft:FiraCode Nerd Font-16:style=Medium" -e tmux'
+
 editor = os.getenv("EDITOR") or "emacs"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -81,6 +83,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     awful.layout.suit.fair,
+    -- (speech mode)
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
