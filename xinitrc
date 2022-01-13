@@ -23,7 +23,8 @@ setxkbmap -layout us -option ctrl:nocaps
 # feh --bg-scale ~/Desktop/bg2.jpg
 
 # Launch a terminal session
-urxvt -e tmux &
+# urxvt -e tmux &
+urxvt -fn "xft:FiraCode Nerd Font-16:style=Medium" -e tmux &
 emacs &
 
 # Connect to a synergy server (set IP address)
