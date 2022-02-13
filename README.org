@@ -78,4 +78,5 @@ for windows user, skk settings for windows. Type the following in Power-Shell.
 choco install corvusskk
 #+end_src
 
-Switch between Japanese and English with the (Alt + `) keys. 
+- Switch between Japanese and English with the (Alt + `) keys. 
+- (directory) /SystemRoot(Windows C:/WINDOWS)/System32/IME/IMCRVSKK/imcrvcnf
