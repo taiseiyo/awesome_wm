@@ -71,6 +71,15 @@ sudo apt install dbus-x11
 [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
 
 * options
+** /etc/wsl.conf (setting for WSL)
+#+begin_src bash
+  [interop]
+  appendWindowsPath=false
+  
+  [automount]
+  enabled = false
+#+end_src
+
 ** skk
 for windows user, skk settings for windows. Type the following in Power-Shell
 
@@ -97,11 +106,3 @@ The following links will help you deal with this
 
 - https://support.mozilla.org/ja/kb/firefox-cant-load-websites-other-browsers-can#w_dns-purihuetsuchiji-neng
 
-** /etc/wsl.conf (setting for WSL)
-#+begin_src bash
-  [interop]
-  appendWindowsPath=false
-  
-  [automount]
-  enabled = false
-#+end_src
