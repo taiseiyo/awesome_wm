@@ -90,3 +90,9 @@ You can deal with the error by doing the following
   sudo -p mkdir /run/dbus
   sudo dbus-daemon --system
 #+end_src
+
+** DNS pre-fetch(firefox cannot connect)
+
+The following links will help you deal with this
+
+- https://support.mozilla.org/ja/kb/firefox-cant-load-websites-other-browsers-can#w_dns-purihuetsuchiji-neng
