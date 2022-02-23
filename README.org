@@ -83,7 +83,9 @@ choco install corvusskk
 - (directory) /SystemRoot(Windows C:/WINDOWS)/System32/IME/IMCRVSKK/imcrvcnf
 
 ** dbus warning
+
 You can deal with the error by doing the following
+
 #+begin_src bash
   sudo -p mkdir /run/dbus
   sudo dbus-daemon --system
