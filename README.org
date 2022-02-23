@@ -96,7 +96,7 @@ choco install corvusskk
 You can deal with the error by doing the following
 
 #+begin_src bash
-  sudo -p mkdir /run/dbus
+  sudo mkdir -p /run/dbus
   sudo dbus-daemon --system
 #+end_src
 
