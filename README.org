@@ -70,7 +70,7 @@ sudo apt install dbus-x11
 
 [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
 
-* option
+* options
 ** skk
 for windows user, skk settings for windows. Type the following in Power-Shell
 
