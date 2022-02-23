@@ -71,6 +71,7 @@ sudo apt install dbus-x11
 [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
 
 * option
+** skk
 for windows user, skk settings for windows. Type the following in Power-Shell.
 
 #+begin_src bash
@@ -80,3 +81,10 @@ choco install corvusskk
 
 - Switch between Japanese and English with the (Alt + `) keys. 
 - (directory) /SystemRoot(Windows C:/WINDOWS)/System32/IME/IMCRVSKK/imcrvcnf
+
+** dbus warning
+You can deal with the error by doing the following
+#+begin_src bash
+  sudo -p mkdir /run/dbus
+  sudo dbus-daemon --system
+#+end_src
