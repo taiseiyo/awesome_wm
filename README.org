@@ -96,3 +96,12 @@ You can deal with the error by doing the following
 The following links will help you deal with this
 
 - https://support.mozilla.org/ja/kb/firefox-cant-load-websites-other-browsers-can#w_dns-purihuetsuchiji-neng
+
+** /etc/wsl.conf (setting for WSL)
+#+begin_src bash
+  [interop]
+  appendWindowsPath=false
+  
+  [automount]
+  enabled = false
+#+end_src
