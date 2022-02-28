@@ -8,7 +8,7 @@ local awful = require("awful")
 -- Load the local widget. Write with a relative path from awesome.
 local screenshot = require("widget.screenshot-widget.screenshot")
 local calendar_widget = require("widget.calendar-widget.calendar")
-local brightness_widget = require("widget.brightness-widget.brightness")
+-- local brightness_widget = require("widget.brightness-widget.brightness")
 local batteryarc_widget = require("widget.batteryarc-widget.batteryarc")
 
 require("awful.autofocus")
@@ -61,8 +61,9 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/theme.lua")
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt -e tmux"
--- terminal = 'urxvt -fn "xft:FiraCode Nerd Font-16:style=Medium" -e tmux'
+-- terminal = 'urxvt -e tmux'
+terminal = 'urxvt -fn "xft:FiraCode Nerd Font-22:style=Medium" -e tmux'
+-- terminal = 'urxvt -fn "xft:FiraCode Nerd Font-22:style=Bold" -e tmux'
 
 editor = os.getenv("EDITOR") or "emacs"
 editor_cmd = terminal .. " -e " .. editor
@@ -83,7 +84,6 @@ awful.layout.layouts = {
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     awful.layout.suit.fair,
-    -- (speech mode)
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
@@ -261,7 +261,7 @@ awful.screen.connect_for_each_screen(function(s)
 		  show_current_level = true,
 		  arc_thickness = 1,
             }),
-	    brightness_widget(),
+	    -- brightness_widget(),
 	    
         },
     }
@@ -298,10 +298,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
-    -- control brightness
-    awful.key({"Mod1", "Control"}, "]", function () brightness_widget:inc() end, {description = "increase brightness", group = "brightness"}),
-    awful.key({"Mod1", "Control"}, "[", function () brightness_widget:dec() end, {description = "decrease brightness", group = "brightness"}),
-
     -- screen shot
     awful.key({ }, "Print", scrot_full,
        {description = "Take a screenshot of entire screen", group = "screenshot"}),
@@ -309,13 +305,13 @@ globalkeys = gears.table.join(
        {description = "Take a screenshot of selection", group = "screenshot"}),
 
     -- emacs 
-    awful.key({ "Mod1", "Control" }, "2",   function () awful.util.spawn("emacs") end),
+    awful.key({ "Mod1", "Control" }, "2",   function () awful.spawn("emacs") end),
 
     -- firefox
-    awful.key({ "Mod1", "Control" }, "3",   function () awful.util.spawn("firefox") end),  
+    awful.key({ "Mod1", "Control" }, "3",   function () awful.spawn("firefox") end),  
 
     -- google-chrome
-    awful.key({ "Mod1", "Control" }, "4",   function () awful.util.spawn("google-chrome") end),
+    awful.key({ "Mod1", "Control" }, "4",   function () awful.spawn("google-chrome") end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
