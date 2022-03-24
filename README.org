@@ -68,7 +68,7 @@ sudo apt install dbus-x11
 * Screenshot
 *Image when working normally*
 
-[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/images/screenshot.png]]
+[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/screenshot/screenshot.png]]
 
 * options
 ** /etc/wsl.conf (setting for WSL)
@@ -80,8 +80,13 @@ sudo apt install dbus-x11
   enabled = false
 #+end_src
 
-** skk
-for windows user, skk settings for windows. Type the following in Power-Shell
+** corvusskk
+
+- For windows user  
+skk settings for windows. Type the following in Power-Shell.  Or
+download *corvusskk-x.y.z.exe* using follow URL(proceed *Releases* in
+URL:[[https://github.com/nathancorvussolis/corvusskk]])
+
 
 #+begin_src bash
 # must install choco → https://qiita.com/kangetsu121/items/b6352b547cd32e71bc65
@@ -91,6 +96,20 @@ choco install corvusskk
 - Switch between Japanese and English with the (Alt + `) keys
 - (application directory) /SystemRoot(Windows C:/WINDOWS)/System32/IME/IMCRVSKK/imcrvcnf
 
+- Recommended settings
+  
+[[https://raw.githubsercontent.com/taiseiyo/awesome_wm/master/screenshot/corvusskk_window.png]]
+
+*** skk-dict
+- URL: [[http://openlab.ring.gr.jp/skk/skk/dic/]]
+
+- The list of dictionaries to install
+  - SKK-JISYO.edict.tar.gz
+  - SKK-JISYO.geo.gz
+  - SKK-JISYO.L.gz
+  - SKK-JISYO.station.gz
+
+  
 ** dbus warning
 
 You can deal with the error by doing the following
