@@ -98,7 +98,9 @@ choco install corvusskk
 
 - Recommended settings
   
-[[https://raw.githubsercontent.com/taiseiyo/awesome_wm/master/screenshot/corvusskk_window.png]]
+[[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/screenshot/corvusskk_window.png]]
+
+
 
 *** skk-dict
 - URL: [[http://openlab.ring.gr.jp/skk/skk/dic/]]
