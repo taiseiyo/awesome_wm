@@ -113,7 +113,10 @@ choco install corvusskk
 Program to use when you want to make ctrl without using CapsLock
   - URL: [[https://docs.microsoft.com/en-us/sysinternals/downloads/ctrl2cap]]
   - Install Procedure : [[https://codeforfun.jp/how-to-use-caps-lock-as-ctrl/]]
-    - Run *ctrl2cap/install* at the command prompt (cmd) 
+    - Unzip the download file
+    - Run *ctrl2cap/install* on the directory where Ctrl2Cap is stored
+      on the command prompt (cmd)
+      
 ** dbus warning
 
 You can deal with the error by doing the following
