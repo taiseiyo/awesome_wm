@@ -84,7 +84,7 @@ sudo apt install dbus-x11
 
 - For windows user  
 skk settings for windows. Type the following in Power-Shell.  Or
-download *corvusskk-x.y.z.exe* using follow URL(proceed *Releases* in
+download *corvusskk-x.y.z.exe* using follow URL(proceed *Releasecs* in
 URL:[[https://github.com/nathancorvussolis/corvusskk]])
 
 
@@ -100,8 +100,11 @@ choco install corvusskk
   
 [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/screenshot/corvusskk_window.png]]
 
-
-
+** Ctrl2Cap
+- Program to use when you want to make ctrl without using CapsLock
+  - URL: [[https://docs.microsoft.com/en-us/sysinternals/downloads/ctrl2cap]]
+  - Install Procedure : [[https://codeforfun.jp/how-to-use-caps-lock-as-ctrl/]]
+ 
 *** skk-dict
 - URL: [[http://openlab.ring.gr.jp/skk/skk/dic/]]
 
