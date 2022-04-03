@@ -99,11 +99,6 @@ choco install corvusskk
 - Recommended settings
   
 [[https://raw.githubusercontent.com/taiseiyo/awesome_wm/master/screenshot/corvusskk_window.png]]
-
-** Ctrl2Cap
-- Program to use when you want to make ctrl without using CapsLock
-  - URL: [[https://docs.microsoft.com/en-us/sysinternals/downloads/ctrl2cap]]
-  - Install Procedure : [[https://codeforfun.jp/how-to-use-caps-lock-as-ctrl/]]
  
 *** skk-dict
 - URL: [[http://openlab.ring.gr.jp/skk/skk/dic/]]
@@ -114,7 +109,11 @@ choco install corvusskk
   - SKK-JISYO.L.gz
   - SKK-JISYO.station.gz
 
-  
+** Ctrl2Cap
+Program to use when you want to make ctrl without using CapsLock
+  - URL: [[https://docs.microsoft.com/en-us/sysinternals/downloads/ctrl2cap]]
+  - Install Procedure : [[https://codeforfun.jp/how-to-use-caps-lock-as-ctrl/]]
+    - Run *ctrl2cap/install* at the command prompt (cmd) 
 ** dbus warning
 
 You can deal with the error by doing the following
