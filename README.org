@@ -24,15 +24,17 @@ bash install.sh
 - screenshot default preserve directory is "~/tmp/screenshots/"
 
 * WSL version
-** Preparation 
-1. Click Windows icon → enter "control panel" → click "program" →
+** Preparation
+1. Your cmd(command prompt) input "wsl --install" and reboot your PC
+    
+2. Click Windows icon → enter "control panel" → click "program" →
    click "program and features" → click "Turn Windows features on or
    off" in left menu → check "Windows Subsystem for Linux" and
    "Virtual Machine Platform"
 
-2. install Vcxsrv
+3. install Vcxsrv
 
-3. Add the following to .bashrc
+4. Add the following to .bashrc
   #+begin_src bash
   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
   export LIBGL_ALWAYS_INDIRECT=1
@@ -41,23 +43,23 @@ bash install.sh
   export GDK_SCALE=1.25
   #+end_src
 
-4. edit /etc/X11/Xwrapper.config
+5. edit /etc/X11/Xwrapper.config
    - add "allowed_users=anybody"
 
-5. vcxsrv firewall settings
+6. vcxsrv firewall settings
    - press (Windows key + r)
    - input → wf.msc 
    - click "Inbound Rules" → Changed all actions to "allow the connection"
 
-6. choice "scale 100%" from Windows Settings → System → Display
+7. choice "scale 100%" from Windows Settings → System → Display
 
-7. XLanch option(before starting) 
+8. XLanch option(before starting) 
    - Enter "-ac -keyhook" for the third additional option 
 
-8. start awesome
+9. start awesome
    - Enter "awesome" on your terminal
 
-9. You should install below
+10. You should install below
 #+begin_src bash
 sudo apt install dbus-x11 
 #+end_src
