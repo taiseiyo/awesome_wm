@@ -95,6 +95,9 @@ URL:[[https://github.com/nathancorvussolis/corvusskk]])
 choco install corvusskk
 #+end_src
 
+- change keyboard option
+  - 時刻と言語 -> 言語と地域 -> オプション -> インストールされているキーボード -> キーボードの追加
+    
 - Switch between Japanese and English with the (Alt + `) keys
 - (application directory) /SystemRoot(Windows C:/WINDOWS)/System32/IME/IMCRVSKK/imcrvcnf
 
